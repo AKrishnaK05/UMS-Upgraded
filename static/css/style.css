@@ -1740,7 +1740,7 @@ textarea.error {
 }
 
 /* Page-specific: student detail popup */
-.student-info-card {
+.popup-container .student-info-card {
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     color: #fff;
     border-radius: 14px;
@@ -1751,7 +1751,7 @@ textarea.error {
     margin-bottom: 16px;
 }
 
-.student-avatar-large {
+.popup-container .student-avatar-large {
     width: 74px;
     height: 74px;
     border-radius: 50%;
@@ -1762,22 +1762,22 @@ textarea.error {
     font-weight: 700;
 }
 
-.student-info-details {
+.popup-container .student-info-details {
     flex: 1;
 }
 
-.student-info-details h3 {
+.popup-container .student-info-details h3 {
     font-size: 1.2rem;
     margin-bottom: 8px;
 }
 
-.student-info-card .info-grid {
+.popup-container .student-info-card .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 6px 12px;
 }
 
-.student-info-card .info-item {
+.popup-container .student-info-card .info-item {
     border: none;
     background: transparent;
     padding: 0;
@@ -1786,30 +1786,30 @@ textarea.error {
     gap: 6px;
 }
 
-.student-info-card .label {
+.popup-container .student-info-card .label {
     opacity: .9;
     font-size: .78rem;
     text-transform: none;
 }
 
-.student-info-card .value {
+.popup-container .student-info-card .value {
     font-weight: 700;
     font-size: .82rem;
 }
 
-.cgpa-display {
+.popup-container .cgpa-display {
     background: rgba(255, 255, 255, 0.22);
     border-radius: 10px;
     padding: 10px 12px;
     text-align: center;
 }
 
-.cgpa-label {
+.popup-container .cgpa-label {
     font-size: .7rem;
     opacity: .9;
 }
 
-.cgpa-value {
+.popup-container .cgpa-value {
     display: block;
     font-size: 1.5rem;
     font-weight: 800;
@@ -1944,6 +1944,253 @@ textarea.error {
     gap: 8px;
     justify-content: center;
     margin-top: 10px;
+}
+
+/* Page-specific: student dashboard */
+.dashboard .student-info-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.dashboard .info-left,
+.faculty-dashboard .info-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard .avatar,
+.faculty-dashboard .avatar {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    font-size: 1.45rem;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.dashboard .info-details h2,
+.faculty-dashboard .info-details h2 {
+    margin-bottom: 3px;
+    font-size: 1.15rem;
+}
+
+.dashboard .info-details p,
+.faculty-dashboard .info-details p {
+    color: #64748b;
+    font-size: .84rem;
+    margin: 2px 0;
+}
+
+.dashboard .cgpa-badge {
+    background: linear-gradient(135deg, #0ea5a4 0%, #22c55e 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.dashboard .cgpa-label {
+    display: block;
+    font-size: .7rem;
+    opacity: .9;
+}
+
+.dashboard .cgpa-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.dashboard .tile-content h3 {
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+}
+
+.dashboard .tile-stats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dashboard .stat {
+    flex: 1;
+}
+
+.dashboard .stat-value {
+    display: block;
+    font-size: 1.2rem;
+    color: #4338ca;
+    font-weight: 800;
+}
+
+.dashboard .stat-label {
+    display: block;
+    color: #64748b;
+    font-size: .72rem;
+}
+
+.dashboard .tile-description {
+    color: #64748b;
+    font-size: .84rem;
+    margin-bottom: 10px;
+}
+
+.tile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    padding: 8px 12px;
+}
+
+.quick-actions {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    padding: 16px;
+}
+
+.quick-actions h3 {
+    margin-bottom: 10px;
+}
+
+.action-card {
+    border: 1px solid #dbe1ee;
+    background: #f8faff;
+    color: #1f2937;
+    border-radius: 10px;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.action-card:hover {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+}
+
+.action-card i {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #4f46e5;
+}
+
+.action-card span {
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+/* Page-specific: faculty dashboard */
+.faculty-dashboard .faculty-info-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-sm);
+}
+
+.faculty-dashboard .tile {
+    text-align: center;
+}
+
+.faculty-dashboard .tile-content h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.faculty-dashboard .tile-content .stat {
+    font-size: .85rem;
+    color: #4338ca;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+
+.faculty-dashboard .tile-content p {
+    color: #64748b;
+    font-size: .83rem;
+    margin-bottom: 10px;
+}
+
+.activities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.activity-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.activity-content h4 {
+    font-size: .9rem;
+    margin-bottom: 3px;
+}
+
+.activity-content p {
+    color: #64748b;
+    font-size: .8rem;
+    margin-bottom: 3px;
+}
+
+.activity-content .time {
+    color: #94a3b8;
+    font-size: .72rem;
+}
+
+#popupModal {
+    z-index: 10000;
+}
+
+#popupModal .modal-content {
+    width: min(1200px, 95%);
+    max-height: 90vh;
+    margin: 20px auto;
+    overflow-y: auto;
+}
+
+#popupModal .close {
+    float: right;
+    padding: 10px 14px;
+    font-size: 1.7rem;
+    color: #64748b;
+    cursor: pointer;
+}
+
+#modalBody {
+    padding: 14px;
 }
 
 /* Page-specific: profile + admin */
