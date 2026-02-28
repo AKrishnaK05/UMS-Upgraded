@@ -2210,27 +2210,27 @@ textarea.error {
     padding: 20px;
 }
 
-.info-grid {
+.profile-card .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 14px;
 }
 
-.info-item {
+.profile-card .info-item {
     border: 1px solid var(--border);
     background: var(--surface-muted);
     border-radius: 10px;
     padding: 12px;
 }
 
-.info-item label {
+.profile-card .info-item label {
     font-size: .75rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: .4px;
 }
 
-.info-item p {
+.profile-card .info-item p {
     margin-top: 4px;
     font-weight: 700;
 }
@@ -2239,8 +2239,10 @@ textarea.error {
     color: #b91c1c;
 }
 
-.panel-header,
-.card-header {
+.admin-card .panel-header,
+.admin-card .card-header,
+.admin-panel .panel-header,
+.admin-panel .card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2248,8 +2250,10 @@ textarea.error {
     margin-bottom: 14px;
 }
 
-.panel-header h3,
-.card-header h3 {
+.admin-card .panel-header h3,
+.admin-card .card-header h3,
+.admin-panel .panel-header h3,
+.admin-panel .card-header h3 {
     font-size: 1.08rem;
 }
 
@@ -2259,7 +2263,9 @@ textarea.error {
     font-weight: 700;
 }
 
-.btn-icon {
+.admin-table .btn-icon,
+.panel-actions .btn-icon,
+.action-list .btn-icon {
     color: #4338ca;
     margin-right: 8px;
     font-size: 1rem;
